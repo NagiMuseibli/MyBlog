@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Blog;
 
 use App\Http\Controllers\Controller;
+use App\Models\Post;
 use Illuminate\Http\Request;
 
 class PostController extends Controller
@@ -14,7 +15,10 @@ class PostController extends Controller
      */
     public function index()
     {
-        return view('blog.index');
+
+        return view('blog.index', [
+            'posts' => Post::orderBy('updated_at', 'desc')->paginate(20)
+        ]);
     }
 
     /**
