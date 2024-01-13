@@ -18,15 +18,15 @@
     <link href="http://fonts.googleapis.com/css?family=Raleway:400,900,800,700,500,200,100,600" rel="stylesheet">
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="{{ 'assets/bootstrap/bootstrap.css' }}">
-    <link rel="stylesheet" href="{{ 'assets/css/misc.css' }}">
-    <link rel="stylesheet" href="{{ 'assets/css/blue-scheme.css' }}">
+    <link rel="stylesheet" href="{{ URL::asset('assets/bootstrap/bootstrap.css') }}">
+    <link rel="stylesheet" href="{{ URL::asset('assets/css/misc.css') }}">
+    <link rel="stylesheet" href="{{ URL::asset('assets/css/blue-scheme.css') }}">
 
     <!-- JavaScripts -->
-    <script src="{{ 'assets/js/jquery-1.10.2.min.js' }}"></script>
-    <script src="{{ 'assets/js/jquery-migrate-1.2.1.min.js' }}"></script>
+    <script src="{{ URL::asset('assets/js/jquery-1.10.2.min.js') }}"></script>
+    <script src="{{ URL::asset('assets/js/jquery-migrate-1.2.1.min.js') }}"></script>
 
-    <link rel="shortcut icon" href="{{ 'assets/images/favicon.ico' }}" type="image/x-icon" />
+    <link rel="shortcut icon" href="{{ URL::asset('assets/images/favicon.ico') }}" type="image/x-icon" />
 
 </head>
 
@@ -62,7 +62,7 @@
 
                     <div class="pull-left logo">
                         <a href="{{ route('home') }}">
-                            <img src="{{ 'assets/images/logo.png' }}" alt="Medigo by templatemo">
+                            <img src="{{ URL::asset('assets/images/logo.png') }}" alt="Medigo by templatemo">
                         </a>
                     </div> <!-- /.logo -->
 
@@ -134,8 +134,8 @@
     </footer> <!-- /.site-footer -->
 
     <!-- Scripts -->
-    <script src="{{ 'assets/js/min/plugins.min.js' }}"></script>
-    <script src="{{ 'assets/js/min/medigo-custom.min.js' }}"></script>
+    <script src="{{ URL::asset('assets/js/min/plugins.min.js') }}"></script>
+    <script src="{{ URL::asset('assets/js/min/medigo-custom.min.js') }}"></script>
 
 </body>
 

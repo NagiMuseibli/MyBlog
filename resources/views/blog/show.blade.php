@@ -28,7 +28,7 @@
                     <div class="col-md-12">
                         <div class="post-blog">
                             <div class="blog-image">
-                                <img src="{{ 'assets/images/includes/blog2.jpg' }}" alt="">
+                                <img src="{{ URL::asset('assets/images/includes/blog2.jpg') }}" alt="">
                             </div> <!-- /.blog-image -->
                             <div class="blog-content">
                                 <span class="meta-date"><a href="#">24 February 2084</a></span>
@@ -66,7 +66,7 @@
                     <div class="col-md-12">
                         <div id="blog-author" class="clearfix">
                             <a href="#" class="blog-author-img pull-left">
-                                <img src="{{ 'assets/images/includes/author.png' }}" alt="">
+                                <img src="{{ URL::asset('assets/images/includes/author.png') }}" alt="">
                             </a>
                             <div class="blog-author-info">
                                 <h4 class="author-name"><a href="#">Candy Sharp</a></h4>
@@ -84,8 +84,8 @@
                             <div class="blog-comments-content">
                                 <div class="media">
                                     <div class="pull-left">
-                                        <img class="media-object" src="{{ 'assets/images/includes/comment1.jpg' }}"
-                                            alt="">
+                                        <img class="media-object"
+                                            src="{{ URL::asset('assets/images/includes/comment1.jpg') }}" alt="">
                                     </div>
                                     <div class="media-body">
                                         <div class="media-heading">
@@ -96,7 +96,8 @@
                                                 class="label label-primary">New</span></p>
                                         <div class="media">
                                             <div class="pull-left">
-                                                <img class="media-object" src="{{ 'assets/images/includes/comment2.jpg' }}"
+                                                <img class="media-object"
+                                                    src="{{ URL::asset('assets/images/includes/comment2.jpg') }}"
                                                     alt="">
                                             </div>
                                             <div class="media-body">
@@ -113,8 +114,8 @@
                                 </div>
                                 <div class="media">
                                     <div class="pull-left">
-                                        <img class="media-object" src="{{ 'assets/images/includes/comment3.jpg' }}"
-                                            alt="">
+                                        <img class="media-object"
+                                            src="{{ URL::asset('assets/images/includes/comment3.jpg') }}" alt="">
                                     </div>
                                     <div class="media-body">
                                         <div class="media-heading">
@@ -182,7 +183,7 @@
                         <h5 class="widget-title">Recent Posts</h5>
                         <div class="last-post clearfix">
                             <div class="thumb pull-left">
-                                <a href="#"><img src="{{ 'assets/images/includes/blogthumb1.jpg' }}"
+                                <a href="#"><img src="{{ URL::asset('assets/images/includes/blogthumb1.jpg') }}"
                                         alt=""></a>
                             </div>
                             <div class="content">
@@ -192,7 +193,7 @@
                         </div> <!-- /.last-post -->
                         <div class="last-post clearfix">
                             <div class="thumb pull-left">
-                                <a href="#"><img src="{{ 'assets/images/includes/blogthumb2.jpg' }}"
+                                <a href="#"><img src="{{ URL::asset('assets/images/includes/blogthumb2.jpg') }}"
                                         alt=""></a>
                             </div>
                             <div class="content">
@@ -202,7 +203,7 @@
                         </div> <!-- /.last-post -->
                         <div class="last-post clearfix">
                             <div class="thumb pull-left">
-                                <a href="#"><img src="{{ 'assets/images/includes/blogthumb3.jpg' }}"
+                                <a href="#"><img src="{{ URL::asset('assets/images/includes/blogthumb3.jpg') }}"
                                         alt=""></a>
                             </div>
                             <div class="content">
