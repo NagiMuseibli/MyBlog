@@ -1,112 +1,10 @@
-<!DOCTYPE html>
-<html lang="en-US">
+@extends('layouts.app')
+@section('title')
+    My Blog
+@endsection
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>Medigo Blue, free responsive template</title>
-    <meta name="keywords" content="">
-    <meta name="description" content="">
-    <meta name="author" content="templatemo">
-    <!--
- Medigo Template
- http://www.templatemo.com/preview/templatemo_460_medigo
-    -->
-
-    <!-- Google Fonts -->
-    <link href="http://fonts.googleapis.com/css?family=PT+Serif:400,700,400italic,700itali" rel="stylesheet">
-    <link href="http://fonts.googleapis.com/css?family=Raleway:400,900,800,700,500,200,100,600" rel="stylesheet">
-
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="{{ 'assets/bootstrap/bootstrap.css' }}">
-    <link rel="stylesheet" href="{{ 'assets/css/misc.css' }}">
-    <link rel="stylesheet" href="{{ 'assets/css/blue-scheme.css' }}">
-
-    <!-- JavaScripts -->
-    <script src="{{ 'assets/js/jquery-1.10.2.min.js' }}"></script>
-    <script src="{{ 'assets/js/jquery-migrate-1.2.1.min.js' }}"></script>
-
-    <link rel="shortcut icon" href="{{ 'assets/images/favicon.ico' }}" type="image/x-icon" />
-
-</head>
-
-<body>
-    <div class="responsive_menu">
-        <ul class="main_menu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="#">Portfolio</a>
-                <ul>
-                    <li><a href="portfolio.html">Portfolio Grid</a></li>
-                    <li><a href="project-image.html">Project Image</a></li>
-                    <li><a href="project-slideshow.html">Project Slideshow</a></li>
-                </ul>
-            </li>
-            <li><a href="#">Blog</a>
-                <ul>
-                    <li><a href="blog.html">Blog Standard</a></li>
-                    <li><a href="blog-single.html">Blog Single</a></li>
-                    <li><a href="#">visit templatemo</a></li>
-                </ul>
-            </li>
-            <li><a href="archives.html">Archives</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul> <!-- /.main_menu -->
-    </div> <!-- /.responsive_menu -->
-
-    <header class="site-header clearfix">
-        <div class="container">
-
-            <div class="row">
-
-                <div class="col-md-12">
-
-                    <div class="pull-left logo">
-                        <a href="index.html">
-                            <img src="{{ 'assets/images/logo.png' }}" alt="Medigo by templatemo">
-                        </a>
-                    </div> <!-- /.logo -->
-
-                    <div class="main-navigation pull-right">
-
-                        <nav class="main-nav visible-md visible-lg">
-                            <ul class="sf-menu">
-                                <li class="active"><a href="index.html">Home</a></li>
-                                <li><a href="#">Portfolio</a>
-                                    <ul>
-                                        <li><a href="portfolio.html">Portfolio Grid</a></li>
-                                        <li><a href="project-image.html">Project Image</a></li>
-                                        <li><a href="project-slideshow.html">Project Slideshow</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="#">Blog</a>
-                                    <ul>
-                                        <li><a href="blog.html">Blog Standard</a></li>
-                                        <li><a href="blog-single.html">Blog Single</a></li>
-                                        <li><a href="#">visit templatemo</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="archives.html">Archives</a></li>
-                                <li><a href="contact.html">Contact</a></li>
-                            </ul> <!-- /.sf-menu -->
-                        </nav> <!-- /.main-nav -->
-
-                        <!-- This one in here is responsive menu for tablet and mobiles -->
-                        <div class="responsive-navigation visible-sm visible-xs">
-                            <a href="#nogo" class="menu-toggle-btn">
-                                <i class="fa fa-bars"></i>
-                            </a>
-                        </div> <!-- /responsive_navigation -->
-
-                    </div> <!-- /.main-navigation -->
-
-                </div> <!-- /.col-md-12 -->
-
-            </div> <!-- /.row -->
-
-        </div> <!-- /.container -->
-    </header> <!-- /.site-header -->
-
-    <section id="homeIntro" class="parallax first-widget">
+@section('view.index')
+    {{-- <section id="homeIntro" class="parallax first-widget">
         <div class="parallax-overlay">
             <div class="container home-intro-content">
                 <div class="row">
@@ -157,8 +55,8 @@
                         </div> <!-- /.service-icon-wrap -->
                         <div class="service-cnt-wrap">
                             <h3 class="service-title">Change Icons</h3>
-                            <p>Check <a rel="nofollow" href="http://fontawesome.io/icons/"
-                                    target="_blank">FontAwesome</a> for your suitable icons. Example: &lt;i
+                            <p>Check <a rel="nofollow" href="http://fontawesome.io/icons/" target="_blank">FontAwesome</a>
+                                for your suitable icons. Example: &lt;i
                                 class=&quot;fa fa-download&quot;&gt;&lt;/i&gt;</p>
                         </div> <!-- /.service-cnt-wrap -->
                     </div> <!-- /.service-box-wrap -->
@@ -211,8 +109,8 @@
                         </div> <!-- /.service-icon-wrap -->
                         <div class="service-cnt-wrap">
                             <h3 class="service-title">Special Thanks</h3>
-                            <p>Credit goes to <a rel="nofollow" href="http://unsplash.com"
-                                    target="_blank">Unsplash</a> for images used in this template.</p>
+                            <p>Credit goes to <a rel="nofollow" href="http://unsplash.com" target="_blank">Unsplash</a> for
+                                images used in this template.</p>
                         </div> <!-- /.service-cnt-wrap -->
                     </div> <!-- /.service-box-wrap -->
                 </div> <!-- /.col-md-4 -->
@@ -243,8 +141,7 @@
                                 <h3 class="portfolio-title"><a href="project-slideshow.html">Visual Admin</a></h3>
                             </div>
                             <div class="portfolio-expand">
-                                <a class="fancybox" href="{{ 'assets/images/includes/project1.jpg' }}"
-                                    title="Visual Admin">
+                                <a class="fancybox" href="{{ 'assets/images/includes/project1.jpg' }}" title="Visual Admin">
                                     <i class="fa fa-expand"></i>
                                 </a>
                             </div>
@@ -519,36 +416,5 @@
                 </div> <!-- /.row -->
             </div> <!-- /.container -->
         </div> <!-- /.parallax-overlay -->
-    </section> <!-- /#blogPosts -->
-
-    <footer class="site-footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <nav class="footer-nav clearfix">
-                        <ul class="footer-menu">
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="portfolio.html">Portfolio</a></li>
-                            <li><a href="blog.html">Blog Posts</a></li>
-                            <li><a href="archives.html">Shortcodes</a></li>
-                            <li><a href="contact.html">Contact</a></li>
-                        </ul> <!-- /.footer-menu -->
-                    </nav> <!-- /.footer-nav -->
-                </div> <!-- /.col-md-12 -->
-            </div> <!-- /.row -->
-            <div class="row">
-                <div class="col-md-12">
-                    <p class="copyright-text">Copyright &copy; 2084 Company Name
-                        | Design: templatemo</p>
-                </div> <!-- /.col-md-12 -->
-            </div> <!-- /.row -->
-        </div> <!-- /.container -->
-    </footer> <!-- /.site-footer -->
-
-    <!-- Scripts -->
-    <script src="{{ 'assets/js/min/plugins.min.js' }}"></script>
-    <script src="{{ 'assets/js/min/medigo-custom.min.js' }}"></script>
-
-</body>
-
-</html>
+    </section> <!-- /#blogPosts --> --}}
+@endsection
