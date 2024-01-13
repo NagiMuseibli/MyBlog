@@ -29,7 +29,7 @@
                         @foreach ($posts as $post)
                             <div class="post-blog">
                                 <div class="blog-image">
-                                    <a href="blog-single.html">
+                                    <a href="{{ route('blog.show', $post->id) }}">
                                         <img src="{{ 'assets/images/includes/blog1.jpg' }}" alt="">
                                     </a>
                                 </div> <!-- /.blog-image -->
@@ -37,7 +37,7 @@
                                     <span class="meta-date"><a href="#">28 February 2084</a></span>
                                     <span class="meta-comments"><a href="#">14 Comments</a></span>
                                     <span class="meta-author"><a href="#">Candy Sharp</a></span>
-                                    <h3><a href="blog-single.html">{{ $post->title }}</a></h3>
+                                    <h3><a href="{{ route('blog.show', $post->id) }}">{{ $post->title }}</a></h3>
                                     <p class="light-text">{{ $post->excerpt }}</p>
                                     <p>{{ $post->body }}<a href="{{ route('blog.show', $post->id) }}">Continue
                                             Reading...</a></p>
