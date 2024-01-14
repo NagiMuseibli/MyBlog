@@ -54,7 +54,7 @@ class PostController extends Controller
         return view('blog.show', [
             'post' => Post::findOrFail($id),
             'comments' => Comment::with('user')->where('post_id', $id)->get(),
-            'latestPosts' => Post::latest()->take(3)->get()
+            'latestPosts' => Post::where('id', '!=', $id)->latest()->take(3)->get()
         ]);
     }
 
