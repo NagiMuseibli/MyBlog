@@ -33,7 +33,7 @@
                             <div class="blog-content">
                                 <span class="meta-date"><a
                                         href="#">{{ $post->updated_at->format('d/m/Y') }}</a></span>
-                                <span class="meta-comments"><a href="#blog-comments">{{ $post->comments->count() }}
+                                <span class="meta-comments"><a href="#blog-comments">{{ $comments->count() }}
                                         Comments</a></span>
                                 <span class="meta-author"><a href="#blog-author"> {{ $post->user->name }}</a></span>
                                 <h3>Standard Blog Post Formating Medigo</h3>
@@ -82,52 +82,28 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div id="blog-comments" class="blog-post-comments">
-                            <h3>3 Comments</h3>
+                            <h3>{{ $comments->count() }} Comments</h3>
                             <div class="blog-comments-content">
-                                <div class="media">
-                                    <div class="pull-left">
-                                        <img class="media-object"
-                                            src="{{ URL::asset('assets/images/includes/comment1.jpg') }}" alt="">
-                                    </div>
-                                    <div class="media-body">
-                                        <div class="media-heading">
-                                            <h4>Linda Wilson</h4>
-                                            <a href="#"><span>4 weeks ago</span><span>Reply</span></a>
+                                @foreach ($comments as $comment)
+                                    <div class="media">
+                                        <div class="pull-left">
+                                            <img class="media-object"
+                                                src="{{ URL::asset('assets/images/includes/comment1.jpg') }}"
+                                                alt="">
                                         </div>
-                                        <p>Lorem ipsum dolor sit amet lorem, elit. Sequi, nam magni repellendus! <span
-                                                class="label label-primary">New</span></p>
-                                        <div class="media">
-                                            <div class="pull-left">
-                                                <img class="media-object"
-                                                    src="{{ URL::asset('assets/images/includes/comment2.jpg') }}"
-                                                    alt="">
+                                        <div class="media-body">
+                                            <div class="media-heading">
+                                                <h4>{{ $comment->user->name }}</h4>
+                                                <a href="#"><span>4 weeks ago</span><span>Reply</span></a>
                                             </div>
-                                            <div class="media-body">
-                                                <div class="media-heading">
-                                                    <h4>Stephen</h4>
-                                                    <a href="#"><span>5 weeks ago</span><span>Reply</span></a>
-                                                </div>
-                                                <p>Temporibus, ea, praesentium eaque totam vel quos laboriosam quia sit
-                                                    dolore at consequatur beatae aliquam debitis porro quasi cupiditate
-                                                    quod!</p>
-                                            </div>
+                                            <p>Lorem ipsum dolor sit amet lorem, elit. Sequi, nam magni repellendus! <span
+                                                    class="label label-primary">New</span></p>
+
                                         </div>
                                     </div>
-                                </div>
-                                <div class="media">
-                                    <div class="pull-left">
-                                        <img class="media-object"
-                                            src="{{ URL::asset('assets/images/includes/comment3.jpg') }}" alt="">
-                                    </div>
-                                    <div class="media-body">
-                                        <div class="media-heading">
-                                            <h4>Marco New</h4>
-                                            <a href="#"><span>6 weeks ago</span><span>Reply</span></a>
-                                        </div>
-                                        <p>Enim, iste numquam inventore reiciendis libero quidem quos voluptate? Thank you
-                                            for visiting templatemo.</p>
-                                    </div>
-                                </div>
+                                @endforeach
+
+
                             </div> <!-- /.blog-comments-content -->
                         </div> <!-- /.blog-post-comments -->
                     </div> <!-- /.col-md-12 -->

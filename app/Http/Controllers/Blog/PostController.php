@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Blog;
 
 use App\Http\Controllers\Controller;
+use App\Models\Comment;
 use App\Models\Post;
 use Illuminate\Http\Request;
 
@@ -50,9 +51,9 @@ class PostController extends Controller
      */
     public function show($id)
     {
-
         return view('blog.show', [
-            'post' => Post::findOrFail($id)
+            'post' => Post::findOrFail($id),
+            'comments' => Comment::with('user')->where('post_id', $id)->get()
         ]);
     }
 
