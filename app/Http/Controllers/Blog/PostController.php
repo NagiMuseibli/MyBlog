@@ -18,7 +18,7 @@ class PostController extends Controller
     {
 
         return view('blog.index', [
-            'posts' => Post::orderBy('updated_at', 'desc')->paginate(20),
+            'posts' => Post::orderBy('created_at', 'desc')->paginate(20),
             'latestPosts' => Post::latest()->take(3)->get()
         ]);
     }

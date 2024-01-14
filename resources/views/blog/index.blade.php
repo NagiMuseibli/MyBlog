@@ -34,9 +34,12 @@
                                     </a>
                                 </div> <!-- /.blog-image -->
                                 <div class="blog-content">
-                                    <span class="meta-date"><a href="#">28 February 2084</a></span>
-                                    <span class="meta-comments"><a href="#">14 Comments</a></span>
-                                    <span class="meta-author"><a href="#">Candy Sharp</a></span>
+                                    <span class="meta-date"><a
+                                            href="#">{{ $post->created_at->format('d/m/Y') }}</a></span>
+                                    <span class="meta-comments"><a href="#">{{ $post->comments->count() }}
+                                            Comments</a></span>
+                                    <span class="meta-author"><a href="#">Created by:
+                                            {{ $post->user->name }}</a></span>
                                     <h3><a href="{{ route('blog.show', $post->id) }}">{{ $post->title }}</a></h3>
                                     <p class="light-text">{{ $post->excerpt }}</p>
                                     <p>{{ $post->body }}<a href="{{ route('blog.show', $post->id) }}">Continue
