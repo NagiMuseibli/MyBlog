@@ -35,36 +35,26 @@
                                         href="#">{{ $post->updated_at->format('d/m/Y') }}</a></span>
                                 <span class="meta-comments"><a href="#blog-comments">{{ $comments->count() }}
                                         Comments</a></span>
-                                <span class="meta-author"><a href="#blog-author"> {{ $post->user->name }}</a></span>
-                                <h3>Standard Blog Post Formating Medigo</h3>
-                                <p>Sed consequat lobortis risus, in rutrum arcu tristique eget. Etiam accumsan lectus quis
-                                    cursus porta. Etiam a turpis sed sapien malesuada pellentesque quis id tortor. Phasellus
-                                    mattis quam enim, non accumsan nibh tincidunt sed.</p>
-                                <p>Nostrum, quibusdam, eaque, numquam, fuga dolores libero amet suscipit in saepe optio
-                                    facilis aperiam nulla iste molestiae reprehenderit facere dolorem illum ea quam incidunt
-                                    est quos odio. Aperiam, repellendus, at, eaque quas eligendi ut ipsum voluptate vero
-                                    fugiat molestiae labore eius similique cumque necessitatibus sequi dolore quam enim
-                                    nostrum.</p>
-                                <blockquote>
+                                <span class="meta-author"><a href="#blog-author">Created by:
+                                        {{ $post->user->name }}</a></span>
+                                <h3>{{ $post->title }}</h3>
+                                <p>{{ $post->body }}</p>
+                                {{-- <blockquote>
                                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, quisquam, aut, eum,
                                     natus excepturi impedit ipsa rerum ratione id dolores ducimus minus eos quod veniam
                                     similique fugit illum error facilis!
-                                </blockquote>
-                                <p>Culpa, iure, debitis, exercitationem, vitae aperiam excepturi explicabo distinctio ea
-                                    nisi illo temporibus dignissimos praesentium dolorem reiciendis iste officiis odio nemo
-                                    dolor illum laboriosam? Architecto, earum accusamus sequi distinctio veniam amet ea
-                                    quibusdam eos sapiente!</p>
-                                <div class="tag-items">
+                                </blockquote> --}}
+                                {{-- <div class="tag-items">
                                     <span class="small-text">Tags:</span>
                                     <a href="#" rel="tag">business</a>
                                     <a href="#" rel="tag">html</a>
                                     <a href="#" rel="tag">education</a>
-                                </div>
+                                </div> --}}
                             </div> <!-- /.blog-content -->
                         </div> <!-- /.post-blog -->
                     </div> <!-- /.col-md-12 -->
                 </div> <!-- /.row -->
-                <div class="row">
+                {{-- <div class="row">
                     <div class="col-md-12">
                         <div id="blog-author" class="clearfix">
                             <a href="#" class="blog-author-img pull-left">
@@ -78,7 +68,7 @@
                             </div>
                         </div>
                     </div> <!-- /.col-md-12 -->
-                </div> <!-- /.row -->
+                </div> <!-- /.row --> --}}
                 <div class="row">
                     <div class="col-md-12">
                         <div id="blog-comments" class="blog-post-comments">
@@ -96,8 +86,7 @@
                                                 <h4>{{ $comment->user->name }}</h4>
                                                 <a href="#"><span>4 weeks ago</span><span>Reply</span></a>
                                             </div>
-                                            <p>Lorem ipsum dolor sit amet lorem, elit. Sequi, nam magni repellendus! <span
-                                                    class="label label-primary">New</span></p>
+                                            <p>{{ $comment->body }}<span class="label label-primary">New</span></p>
 
                                         </div>
                                     </div>
@@ -190,35 +179,8 @@
                             </div>
                         </div> <!-- /.last-post -->
                     </div> <!-- /.sidebar-widget -->
-                    <div class="sidebar-widget">
-                        <h5 class="widget-title">Categories</h5>
-                        <div class="row categories">
-                            <div class="col-md-6">
-                                <ul>
-                                    <li><a href="#">Standard</a></li>
-                                    <li><a href="#">Audio</a></li>
-                                    <li><a href="#">Video</a></li>
-                                    <li><a href="#">Branding</a></li>
-                                </ul>
-                            </div>
-                            <div class="col-md-6">
-                                <ul>
-                                    <li><a href="#">iOS Design</a></li>
-                                    <li><a href="#">Business</a></li>
-                                </ul>
-                            </div>
-                        </div> <!-- /.row -->
-                    </div> <!-- /.sidebar-widget -->
-                    <div class="sidebar-widget">
-                        <h5 class="widget-title">Flickr Feed</h5>
-                        <ul id="flickr-feed" class="thumbs"></ul>
-                    </div> <!-- /.sidebar-widget -->
-                    <div class="sidebar-widget">
-                        <h5 class="widget-title">Text Widget</h5>
-                        <p class="light-text">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut
-                            fermentum massa justo sit amet risus. Cum sociis natoque penatibus et magnis dis parturient…
-                        </p>
-                    </div> <!-- /.sidebar-widget -->
+
+
                 </div> <!-- /.sidebar -->
             </div> <!-- /.col-md-4 -->
 
