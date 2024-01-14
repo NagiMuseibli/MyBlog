@@ -148,36 +148,21 @@
                 <div class="sidebar">
                     <div class="sidebar-widget">
                         <h5 class="widget-title">Recent Posts</h5>
-                        <div class="last-post clearfix">
-                            <div class="thumb pull-left">
-                                <a href="#"><img src="{{ URL::asset('assets/images/includes/blogthumb1.jpg') }}"
-                                        alt=""></a>
-                            </div>
-                            <div class="content">
-                                <span>24 February 2084</span>
-                                <h4><a href="#">Standard Post Formating Medigo</a></h4>
-                            </div>
-                        </div> <!-- /.last-post -->
-                        <div class="last-post clearfix">
-                            <div class="thumb pull-left">
-                                <a href="#"><img src="{{ URL::asset('assets/images/includes/blogthumb2.jpg') }}"
-                                        alt=""></a>
-                            </div>
-                            <div class="content">
-                                <span>24 February 2084</span>
-                                <h4><a href="#">Standard Post Formating Medigo</a></h4>
-                            </div>
-                        </div> <!-- /.last-post -->
-                        <div class="last-post clearfix">
-                            <div class="thumb pull-left">
-                                <a href="#"><img src="{{ URL::asset('assets/images/includes/blogthumb3.jpg') }}"
-                                        alt=""></a>
-                            </div>
-                            <div class="content">
-                                <span>24 February 2084</span>
-                                <h4><a href="#">Standard Post Formating Medigo</a></h4>
-                            </div>
-                        </div> <!-- /.last-post -->
+
+                        @foreach ($latestPosts as $latestPost)
+                            <div class="last-post clearfix">
+                                <div class="thumb pull-left">
+                                    <a href="#"><img src="{{ URL::asset('assets/images/includes/blogthumb1.jpg') }}"
+                                            alt=""></a>
+                                </div>
+                                <div class="content">
+                                    <span>{{ $latestPost->updated_at->format('d/m/Y') }}</span>
+                                    <h4><a href="#">{{ $latestPost->title }}</a></h4>
+                                </div>
+                            </div> <!-- /.last-post -->
+                        @endforeach
+
+
                     </div> <!-- /.sidebar-widget -->
 
 
