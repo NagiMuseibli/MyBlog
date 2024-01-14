@@ -152,12 +152,14 @@
                         @foreach ($latestPosts as $latestPost)
                             <div class="last-post clearfix">
                                 <div class="thumb pull-left">
-                                    <a href="#"><img src="{{ URL::asset('assets/images/includes/blogthumb1.jpg') }}"
+                                    <a href="{{ route('blog.show', $latestPost->id) }}"><img
+                                            src="{{ URL::asset('assets/images/includes/blogthumb1.jpg') }}"
                                             alt=""></a>
                                 </div>
                                 <div class="content">
                                     <span>{{ $latestPost->updated_at->format('d/m/Y') }}</span>
-                                    <h4><a href="#">{{ $latestPost->title }}</a></h4>
+                                    <h4><a href="{{ route('blog.show', $latestPost->id) }}">{{ $latestPost->title }}</a>
+                                    </h4>
                                 </div>
                             </div> <!-- /.last-post -->
                         @endforeach
