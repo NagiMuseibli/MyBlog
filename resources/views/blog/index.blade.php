@@ -49,11 +49,12 @@
                     </div> <!-- /.col-md-12 -->
                     <div class="col-md-12">
                         <ul class="pages">
-                            <li><a href="#" class="active">1</a></li>
+                            {{ $posts->links() }}
+                            {{-- <li><a href="#" class="active">1</a></li>
                             <li><a href="#">2</a></li>
                             <li><a href="#">3</a></li>
                             <li><a href="#">...</a></li>
-                            <li><a href="#">13</a></li>
+                            <li><a href="#">13</a></li> --}}
                         </ul>
                     </div> <!-- /.col-md-12 -->
                 </div> <!-- /.row -->

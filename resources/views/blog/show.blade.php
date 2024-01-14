@@ -147,7 +147,7 @@
             <div class="col-md-4">
                 <div class="sidebar">
                     <div class="sidebar-widget">
-                        <h5 class="widget-title">Recent Posts</h5>
+                        <h5 class="widget-title">Recent 3 Posts</h5>
 
                         @foreach ($latestPosts as $latestPost)
                             <div class="last-post clearfix">
@@ -157,7 +157,7 @@
                                             alt=""></a>
                                 </div>
                                 <div class="content">
-                                    <span>{{ $latestPost->updated_at->format('d/m/Y') }}</span>
+                                    <span>{{ $latestPost->created_at->format('d/m/Y') }}</span>
                                     <h4><a href="{{ route('blog.show', $latestPost->id) }}">{{ $latestPost->title }}</a>
                                     </h4>
                                 </div>
