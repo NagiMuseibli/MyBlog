@@ -60,11 +60,13 @@
 
                         <nav class="main-nav visible-md visible-lg">
                             <ul class="sf-menu">
-                                <li class="active"><a href="{{ route('home') }}">Home</a></li>
+                                <li class="{{ request()->is('/') ? 'active' : '' }}"><a
+                                        href="{{ route('home') }}">Home</a></li>
                                 <li><a href="#">Portfolio</a> </li>
-                                <li><a href="{{ route('blog.index') }}">Blog</a> </li>
-                                <li><a href="archives.html">Archives</a></li>
-                                <li><a href="contact.html">Contact</a></li>
+                                <li class="{{ request()->is('blog') ? 'active' : '' }}"><a
+                                        href="{{ route('blog.index') }}">Blog</a> </li>
+                                <li><a href="#">Archives</a></li>
+                                <li><a href="#">Contact</a></li>
                             </ul> <!-- /.sf-menu -->
                         </nav> <!-- /.main-nav -->
 
