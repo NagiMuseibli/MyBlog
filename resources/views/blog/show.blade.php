@@ -31,9 +31,10 @@
                                 <img src="{{ URL::asset('assets/images/includes/blog2.jpg') }}" alt="">
                             </div> <!-- /.blog-image -->
                             <div class="blog-content">
-                                <span class="meta-date"><a href="#">24 February 2084</a></span>
+                                <span class="meta-date"><a
+                                        href="#">{{ $post->updated_at->format('d/m/Y') }}</a></span>
                                 <span class="meta-comments"><a href="#blog-comments">3 Comments</a></span>
-                                <span class="meta-author"><a href="#blog-author">Candy Sharp</a></span>
+                                <span class="meta-author"><a href="#blog-author">{{ $post->user->name }}</a></span>
                                 <h3>Standard Blog Post Formating Medigo</h3>
                                 <p>Sed consequat lobortis risus, in rutrum arcu tristique eget. Etiam accumsan lectus quis
                                     cursus porta. Etiam a turpis sed sapien malesuada pellentesque quis id tortor. Phasellus
