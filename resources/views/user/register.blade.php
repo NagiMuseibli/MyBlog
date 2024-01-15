@@ -28,18 +28,23 @@
                     <div class="card col-lg-4 mx-auto">
                         <div class="card-body px-5 py-5">
                             <h3 class="card-title text-left mb-3">Register</h3>
-                            <form>
+                            <form action="{{ route('register.create') }}" method="post">
+                                @csrf
                                 <div class="form-group">
                                     <label>Username</label>
-                                    <input type="text" class="form-control p_input">
+                                    <input type="text" name="name" class="form-control p_input">
                                 </div>
                                 <div class="form-group">
                                     <label>Email</label>
-                                    <input type="email" class="form-control p_input">
+                                    <input type="email" name="email" class="form-control p_input">
                                 </div>
                                 <div class="form-group">
                                     <label>Password</label>
-                                    <input type="password" class="form-control p_input">
+                                    <input type="password" name="password" class="form-control p_input">
+                                </div>
+                                <div class="form-group">
+                                    <label>Password</label>
+                                    <input type="password" name="re-password" class="form-control p_input">
                                 </div>
                                 <div class="form-group d-flex align-items-center justify-content-between">
                                     <div class="form-check">
@@ -51,13 +56,8 @@
                                 <div class="text-center">
                                     <button type="submit" class="btn btn-primary btn-block enter-btn">Register</button>
                                 </div>
-                                <div class="d-flex">
-                                    <button class="btn btn-facebook col mr-2">
-                                        <i class="mdi mdi-facebook"></i> Facebook </button>
-                                    <button class="btn btn-google col">
-                                        <i class="mdi mdi-google-plus"></i> Google plus </button>
-                                </div>
-                                <p class="sign-up text-center">Already have an Account?<a href="#"> Sign Up</a>
+                                <p class="sign-up text-center">Already have an Account?<a
+                                        href="{{ route('login.index') }}"> Sign Up</a>
                                 </p>
                                 <p class="terms">By creating an account you are accepting our<a href="#"> Terms &
                                         Conditions</a></p>
