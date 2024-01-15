@@ -18,7 +18,16 @@ class LoginController extends Controller
     {
         if (!Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
             return redirect()->back()->with('danger_login', 'Invalid email or password');
+        } elseif (Auth::user()->is_admin == false) {
+            return "Successfully logged in to User page";
+        } elseif (Auth::user()->is_admin == true) {
+            return "Successfully logged in to Admin page";
         }
-        return "Successfully logged in";
+    }
+
+    public function logout()
+    {
+        auth()->logout();
+        return redirect()->route('login.index');
     }
 }

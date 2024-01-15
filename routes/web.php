@@ -19,8 +19,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', HomeController::class)->name('home');
 Route::post('/register', [RegisterController::class, 'create'])->name('register.create');
-Route::get('/register', [RegisterController::class, 'index'])->name('register.index');
+Route::get('/register',  [RegisterController::class, 'index'])->name('register.index');
 
-Route::get('/login',    [LoginController::class, 'index'])->name('login.index');
+Route::get('/login',     [LoginController::class, 'index'])->name('login.index');
 Route::post('/login',    [LoginController::class, 'login'])->name('login.submit');
+Route::get('/logout',    [LoginController::class, 'logout'])->name('logout');
 Route::resource('blog', PostController::class);
