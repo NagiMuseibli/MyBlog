@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Blog\PostController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
@@ -16,4 +18,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', HomeController::class)->name('home');
+Route::get('/register', [RegisterController::class, 'index'])->name('register.index');
+Route::get('/login',    [LoginController::class, 'index'])->name('login.index');
 Route::resource('blog', PostController::class);
