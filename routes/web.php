@@ -22,4 +22,5 @@ Route::post('/register', [RegisterController::class, 'create'])->name('register.
 Route::get('/register', [RegisterController::class, 'index'])->name('register.index');
 
 Route::get('/login',    [LoginController::class, 'index'])->name('login.index');
+Route::post('/login',    [LoginController::class, 'login'])->name('login.submit');
 Route::resource('blog', PostController::class);
